@@ -51,6 +51,7 @@ public class WebSecurityConfig {
                                 "/api/v1/auth/authenticate",
                                 "/api/v1/user/register",
                                 "/api/v1/auth/refreshToken",
+                                "/api/v1/products/save",
                                 "/api/v1/auth/checkRole",
                                 "/v3/api-docs/**",
                                 "/swagger-ui/**",
@@ -66,7 +67,7 @@ public class WebSecurityConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.addAllowedOrigin("http://localhost:63342"); // Add your frontend origin here
+        config.addAllowedOrigin("http://localhost:63341"); // Add your frontend origin here
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
         source.registerCorsConfiguration("/**", config);
